@@ -16,19 +16,23 @@ fn main() {
 
 
 fn operate(operator: char, first_number: f32, second_number: f32) -> f32 {
-  if operator == '+' {
-    first_number + second_number
-  } else if operator == '-' {
-    first_number - second_number
-  } else if operator == '/' {
-    first_number / second_number
-  }else if operator == '*' {
-    first_number * second_number
-  } else {
-     0.0
+match operator{
+  '+' => first_number + second_number, 
+  '-' => first_number - second_number, 
+  '/' => first_number / second_number, 
+  '*' | 'x' | 'X'  => first_number * second_number,
+   _ => panic!("Operacion invalida del usuario.")
+  
   }
 }
 
 fn output(first_number: f32, operator: char, second_number: f32, result: f32) -> String {
   format!("{} {} {} = {}", first_number, operator, second_number, result)
 }
+
+
+
+
+
+//Para transformar el binario tendremos que coger cargo build --release y
+//nos dara los binarios
