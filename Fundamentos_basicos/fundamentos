@@ -1,0 +1,11 @@
+Para una impresión basica en pantalla, podemos utilizar esto:
+
+pub fn hello() -> &'static str{
+    "Hello, World!"
+}
+
+
+
+
+
+
